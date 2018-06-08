@@ -1,0 +1,8 @@
+__pycache__/
+.DS_Store
+drolex/
+.dockerignore
+.gitignore
+*.md
+*.pyc
+.idea

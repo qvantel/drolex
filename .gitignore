@@ -1,0 +1,6 @@
+.DS_Store
+*.pyc
+drolex/
+.idea
+__pycache__/
+pip-selfcheck.json

@@ -117,6 +117,7 @@ class Drolex:
             config["Config"].update({"ImageEnv": image_config["Config"]["Env"], "ImagePorts": image_config["Config"].get("ExposedPorts", [])})
             image_cmd = (image_config["Config"]["Entrypoint"] or []) + (image_config["Config"]["Cmd"] or [])
             config["Args"] = {"ImageCmd": image_cmd, "Cmd": config["Args"]}
+            config["NetworkSettings"].update({"NetworkMode": config["HostConfig"]["NetworkMode"]})
             if self.debug:
                 import pprint
                 pprinter = pprint.PrettyPrinter(indent=4)

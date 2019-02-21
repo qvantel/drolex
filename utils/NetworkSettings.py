@@ -31,6 +31,8 @@ class NetworkSettings:
         self.config = config
 
     def run(self):
+        if not self.config["Networks"]:
+            return {"NetworkSettings": "--net=\"" + self.config["NetworkMode"] + "\" ", "ExtraNetworks": []}
         main, *rest = list(map(lambda key: {"Name": key, "Options": extract_network_options(key, self.config["Networks"][key])}, self.config["Networks"]))
         return {"NetworkSettings": "--net=\"" + main["Name"] + "\" " + main["Options"], "ExtraNetworks": rest}
 

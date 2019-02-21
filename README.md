@@ -55,7 +55,7 @@ After that the tool can be run through drolex.py
 Drolex can also be run as a container by using the following command:
 
 ```shell
-docker run -m 128m -it --rm -v /var/run/docker.sock:/var/run/docker.sock --name drolex qvantel/drolex:0.2.0 --ID zookeeper
+docker run -m 128m -it --rm -v /var/run/docker.sock:/var/run/docker.sock --name drolex qvantel/drolex:0.2.1 --ID zookeeper
 ```
 
 > Note:
